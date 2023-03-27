@@ -1,0 +1,30 @@
+create table store (id integer, item text, quantity integer, price integer, expiration integer);
+insert into store values
+(1, "books", 50, 12, 2023), 
+(2, "clothes", 40, 30, 2023),
+(3, "Candy", 39, 5, 2025), 
+(4, "Bread", 30, 5, 2023), 
+(5, "shirts", 50, 10, 2020), 
+(6, "socks", 30, 12, 2025), 
+(7, "Coffee", 20, 14, 2025), 
+(8, "Makeup", 30, 30, 2025), 
+(9, "Toothbrush", 29, 7, 2025), 
+(10, "Tooth paste", 10, 10, 2025), 
+(11, "Levi jeans", 20, 80, 2025), 
+(12, "Bras", 29, 30, 2025), 
+(13, "Hair", 19, 12, 2025), 
+(14, "Eyelashes", 20, 12, 2025), 
+(15, "Locks", 1, 12, 2025);
+
+Creating store inventory of all items
+select * from store; 
+
+Select all items expiring in 2025
+select * from store where expiration = 2025;
+
+Select items priced over 12$ and then including items expiring in 2025
+select * from store where price < 12;
+select * from store where price = 10 AND expiration = 2025;
+
+
+
